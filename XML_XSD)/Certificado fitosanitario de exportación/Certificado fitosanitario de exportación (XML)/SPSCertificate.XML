@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rsm:SPSCertificate xmlns:udt="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:21"
+                    xmlns:ram="urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:21"
+                    xmlns:rsm="urn:un:unece:uncefact:data:standard:SPSCertificate:17"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemaLocation="urn:un:unece:uncefact:data:standard:SPSCertificate:17 ../Certificado%20fitosanitario%20de%20exportaci%C3%B3n%20(XSD)/data/standard/SPSCertificate_17p0.xsd">
+    <rsm:SPSExchangedDocument>
+        <ram:Name>NULL</ram:Name>
+        <ram:ID>F-C-06025-07701049-7-N</ram:ID>
+        <ram:TypeCode>851</ram:TypeCode>
+        <ram:StatusCode>70</ram:StatusCode>
+        <ram:IssueDateTime>
+            <udt:DateTimeString>2018-09-14T11:15:31-05:00</udt:DateTimeString>
+        </ram:IssueDateTime>
+        <ram:IssuerSPSParty>
+            <ram:Name>Animal and Plant Health Inspection Service Plant Protection and Quarantine</ram:Name>
+        </ram:IssuerSPSParty>
+        <ram:IncludedSPSNote>
+            <ram:Subject>SPSFL</ram:Subject>
+            <ram:Content>5</ram:Content>
+        </ram:IncludedSPSNote>
+        <ram:IncludedSPSNote>
+            <ram:Subject>ADEDL</ram:Subject>
+            <ram:Content languageID="en">Import Permit Numbers: AR-22773, AR-227775, AE-227776, AR-227778, AR-227780, AR-227781, AR-227782, AR-227783, AR-227786, AR-227787, AR-227788, AR-227789, AR-227790, AR-227838, AR-227846, AR-227847, AR-227848, AR-227849, AR-227850, AR-227852, AR-227855, AR-227856, AR-227858, AR-227859, AR-227843, AR-227844, AR-227842, AR-228762, AR-227857, AR-227791 Presented.
+TOMATO:  The parent plants were officially inspected during the actual growth and found free from Potato spindle tuber viroid, Tomato ringspot Virus.
+BEET:  The parent plants were officially inspected during the actual growth and found free from Heterodera schachtii.
+ALL SEED IN THIS SHIPMENT IS FREE FROM TROGODERMA VARIABILE.</ram:Content>
+        </ram:IncludedSPSNote>
+        <ram:IncludedSPSNote>
+            <ram:Subject>ADDIEDL</ram:Subject>
+            <ram:Content>2018-09-14T00:00:00-05:00</ram:Content>
+        </ram:IncludedSPSNote>
+        <ram:SignatorySPSAuthentication>
+            <ram:ActualDateTime>
+                <udt:DateTimeString>NULL</udt:DateTimeString>
+            </ram:ActualDateTime>
+            <ram:IssueSPSLocation>
+                <ram:Name>El Centro, California</ram:Name>
+            </ram:IssueSPSLocation>
+            <ram:ProviderSPSParty>
+                <ram:Name>NULL</ram:Name>
+                <ram:SpecifiedSPSPerson>
+                    <ram:Name>Paul Deol</ram:Name>
+                </ram:SpecifiedSPSPerson>
+            </ram:ProviderSPSParty>
+            <ram:IncludedSPSClause>
+                <ram:ID>1</ram:ID>
+                <ram:Content />
+            </ram:IncludedSPSClause>
+        </ram:SignatorySPSAuthentication>
+    </rsm:SPSExchangedDocument>
+    <rsm:SPSConsignment>
+        <ram:ConsignorSPSParty>
+            <ram:Name>Emerald Seed Company</ram:Name>
+            <ram:SpecifiedSPSAddress>
+                <ram:LineOne>1735 Austin Road</ram:LineOne>
+                <ram:LineTwo>El Centro, California 92244 USA</ram:LineTwo>
+            </ram:SpecifiedSPSAddress>
+        </ram:ConsignorSPSParty>
+        <ram:ConsigneeSPSParty>
+            <ram:Name>Semillera Guasch SRL</ram:Name>
+            <ram:SpecifiedSPSAddress>
+                <ram:LineOne>Av. Alem 5000</ram:LineOne>
+                <ram:LineTwo>8000 Bahia Blanca, Buenos Aires, Argentina</ram:LineTwo>
+            </ram:SpecifiedSPSAddress>
+        </ram:ConsigneeSPSParty>
+        <ram:ExportSPSCountry>
+            <ram:ID>US</ram:ID>
+            <ram:Name>NULL</ram:Name>
+        </ram:ExportSPSCountry>
+        <ram:ImportSPSCountry>
+            <ram:ID>AR</ram:ID>
+            <ram:Name>NULL</ram:Name>
+        </ram:ImportSPSCountry>
+        <ram:UnloadingBaseportSPSLocation>
+            <ram:Name>Argentina</ram:Name>
+        </ram:UnloadingBaseportSPSLocation>
+        <ram:ExaminationSPSEvent>
+            <ram:OccurrenceSPSLocation>
+                <ram:Name>NULL</ram:Name>
+            </ram:OccurrenceSPSLocation>
+        </ram:ExaminationSPSEvent>
+        <ram:MainCarriageSPSTransportMovement>
+            <ram:ID />
+            <ram:ModeCode>1</ram:ModeCode>
+            <ram:UsedSPSTransportMeans>
+                <ram:Name languageID="en">Ocean Vessel </ram:Name>
+            </ram:UsedSPSTransportMeans>
+        </ram:MainCarriageSPSTransportMovement>
+        <ram:IncludedSPSConsignmentItem>
+            <ram:IncludedSPSTradeLineItem>
+                <ram:SequenceNumeric>0</ram:SequenceNumeric>
+                <ram:Description languageID="en">Seeds</ram:Description>
+                <ram:CommonName languageID="en">Squash</ram:CommonName>
+                <ram:ScientificName languageID="en">Cucurbita maxima</ram:ScientificName>
+                <ram:IntendedUse languageID="en">Planting</ram:IntendedUse>
+                <ram:NetWeightMeasure unitCode="LBR">253.1</ram:NetWeightMeasure>
+                <ram:AdditionalInformationSPSNote>
+                    <ram:Subject>OPTND</ram:Subject>
+                    <ram:Content>All in 235 cardboard Cartons and 19 Polywoven Bags</ram:Content>
+                </ram:AdditionalInformationSPSNote>
+                <ram:AdditionalInformationSPSNote>
+                    <ram:Subject>DMTLIL</ram:Subject>
+                    <ram:Content>Emerald</ram:Content>
+                </ram:AdditionalInformationSPSNote>
+                <ram:ApplicableSPSClassification>
+                    <ram:SystemName>IPPCPCVP</ram:SystemName>
+                    <ram:ClassName languageID="en">Seeds</ram:ClassName>
+                </ram:ApplicableSPSClassification>
+                <ram:OriginSPSCountry>
+                    <ram:ID>US</ram:ID>
+                    <ram:Name>NULL</ram:Name>
+                    <ram:SubordinateSPSCountrySubDivision>
+                        <ram:Name>USA</ram:Name>
+                        <ram:HierarchicalLevelCode>0</ram:HierarchicalLevelCode>
+                    </ram:SubordinateSPSCountrySubDivision>
+                </ram:OriginSPSCountry>
+                <ram:AppliedSPSProcess>
+                    <ram:TypeCode>ZZZ</ram:TypeCode>
+                    <ram:CompletionSPSPeriod>
+                        <ram:StartDateTime>
+                            <udt:DateTimeString>2018-09-13</udt:DateTimeString>
+                        </ram:StartDateTime>
+                        <ram:EndDateTime>
+                            <udt:DateTimeString />
+                        </ram:EndDateTime>
+                    </ram:CompletionSPSPeriod>
+                    <ram:ApplicableSPSProcessCharacteristic>
+                        <ram:Description>TTFT</ram:Description>
+                        <ram:Description languageID="en">Treatment Date: 2018-09-13; Treatment Name: Liquid; Chemical: Thiram; Concentration: 6 oz / 100 pounds;</ram:Description>
+                    </ram:ApplicableSPSProcessCharacteristic>
+                </ram:AppliedSPSProcess>
+            </ram:IncludedSPSTradeLineItem>
+        </ram:IncludedSPSConsignmentItem>
+    </rsm:SPSConsignment>
+</rsm:SPSCertificate>

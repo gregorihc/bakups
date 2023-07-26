@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rsm:SPSImportPermit xmlns:rsm="urn:sgcan:intercom:data:standard:SPSImportPermit:1"
+                     xmlns:udt="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:21"
+                     xmlns:ram="urn:sgcan:intercom:data:standard:INTERCOMSPSImportPermitReusableAggregateBusinessInformationEntity:1"
+                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                     xsi:schemaLocation="urn:sgcan:intercom:data:standard:SPSImportPermit:1 ../Permiso%20fitosanitario%20de%20importacion/data/standard/SPSImportPermit_1p0.xsd">
+    <rsm:SPSExchangedDocument>
+        <ram:ID>SPS-12354IMP</ram:ID>
+        <ram:StatusCode listID="4405">39</ram:StatusCode>
+        <ram:IssueDateTime>
+            <udt:DateTimeString>2016-04-22T13:53:08-03:00</udt:DateTimeString>
+        </ram:IssueDateTime>
+        <ram:EffectiveDateTime>
+            <udt:DateTimeString format="804">20</udt:DateTimeString>
+        </ram:EffectiveDateTime>
+        <ram:IssuerSPSParty>
+            <ram:Name>Servicio Nacional de Sanidad y Calidad Agroalimentaria</ram:Name>
+        </ram:IssuerSPSParty>
+        <ram:IncludedSPSNote>
+            <ram:Subject>SPSFL</ram:Subject>
+            <ram:Content />
+        </ram:IncludedSPSNote>
+        <ram:SignatorySPSAuthentication>
+            <ram:ProviderSPSParty>
+                <ram:Name>NULL</ram:Name>
+                <ram:SpecifiedSPSPerson>
+                    <ram:Name>Miguel Perrerra</ram:Name>
+                </ram:SpecifiedSPSPerson>
+            </ram:ProviderSPSParty>
+            <ram:IssueSPSLocation>
+                <ram:Name>El Centro, California</ram:Name>
+            </ram:IssueSPSLocation>
+            <ram:IncludedSPSClause>
+                <ram:ID>1</ram:ID>
+                <ram:Content />
+            </ram:IncludedSPSClause>
+            <ram:IncludedSPSClause>
+                <ram:ID>2</ram:ID>
+                <ram:Content />
+            </ram:IncludedSPSClause>
+        </ram:SignatorySPSAuthentication>
+    </rsm:SPSExchangedDocument>
+    <rsm:SPSConsignment>
+        <ram:ConsigneeSPSParty>
+            <ram:Name>Semillera Guasch SRL</ram:Name>
+            <ram:SpecifiedSPSAddress>
+                <ram:LineOne>Av. Alem 5000</ram:LineOne>
+                <ram:LineTwo>8000 Bahia Blanca, Buenos Aires, Argentina</ram:LineTwo>
+            </ram:SpecifiedSPSAddress>
+        </ram:ConsigneeSPSParty>
+        <ram:UtilizedSPSTransportEquipment>
+            <ram:ID />
+            <ram:AffixedSPSSeal>
+                <ram:ID>G2382564</ram:ID>
+            </ram:AffixedSPSSeal>
+        </ram:UtilizedSPSTransportEquipment>
+        <ram:ConsignorSPSParty>
+            <ram:Name>Emerald Seed Company</ram:Name>
+            <ram:SpecifiedSPSAddress>
+                <ram:LineOne>1735 Austin Road</ram:LineOne>
+                <ram:LineTwo>El Centro, California 92244 USA</ram:LineTwo>
+            </ram:SpecifiedSPSAddress>
+        </ram:ConsignorSPSParty>
+        <ram:UnloadingBaseportSPSLocation>
+            <ram:ID>UBADE</ram:ID>
+            <ram:Name>Argentina </ram:Name>
+        </ram:UnloadingBaseportSPSLocation>
+        <ram:UnloadingBaseportSPSLocation>
+            <ram:ID>US</ram:ID>
+            <ram:Name>NULL</ram:Name>
+        </ram:UnloadingBaseportSPSLocation>
+        <ram:MainCarriageSPSTransportMovement>
+            <ram:ID>Voyage N° 18</ram:ID>
+            <ram:ModeCode>1</ram:ModeCode>
+            <ram:UsedSPSTransportMeans>
+                <ram:Name>Ocean Vessel: Black Pearl</ram:Name>
+            </ram:UsedSPSTransportMeans>
+        </ram:MainCarriageSPSTransportMovement>
+        <ram:IncludedSPSConsignmentItem>
+            <ram:IncludedSPSTradeLineItem>
+                <ram:Description>Magnolia Seeds</ram:Description>
+                <ram:CommonName>Southern Magnolia</ram:CommonName>
+                <ram:ScientificName>Southern Magnolia</ram:ScientificName>
+                <ram:ScientificName>Magnolia grandiflora</ram:ScientificName>
+                <ram:IntendedUse>Planting</ram:IntendedUse>
+                <ram:NetWeightMeasure unitCode="KGM">60</ram:NetWeightMeasure>
+                <ram:GrossWeightMeasure unitCode="MTQ">5</ram:GrossWeightMeasure>
+                <ram:NetVolumeMeasure unitCode="MTQ">5</ram:NetVolumeMeasure>
+                <ram:AdditionalInformationSPSNote>
+                    <ram:Subject>OQV</ram:Subject>
+                    <ram:Content>8</ram:Content>
+                </ram:AdditionalInformationSPSNote>
+                <ram:AdditionalInformationSPSNote>
+                    <ram:Subject>OQU</ram:Subject>
+                    <ram:Content>Packets</ram:Content>
+                </ram:AdditionalInformationSPSNote>
+                <ram:AdditionalInformationSPSNote>
+                    <ram:Content>REQUISITOS FITOSANITARIOS</ram:Content>
+                </ram:AdditionalInformationSPSNote>
+                <ram:AdditionalInformationSPSNote>
+                    <ram:Content>Observaciones dentro del documento de importación</ram:Content>
+                </ram:AdditionalInformationSPSNote>
+                <ram:ApplicableSPSClassification>
+                    <ram:SystemName>HS</ram:SystemName>
+                    <ram:ClassCode>602200</ram:ClassCode>
+                    <ram:ClassName />
+                </ram:ApplicableSPSClassification>
+                <ram:ApplicableSPSClassification>
+                    <ram:SystemName>IPPCPCVP</ram:SystemName>
+                    <ram:ClassName>Seeds</ram:ClassName>
+                </ram:ApplicableSPSClassification>
+                <ram:ApplicableSPSClassification>
+                    <ram:SystemName>IPPCPCC</ram:SystemName>
+                    <ram:ClassName>Fresh</ram:ClassName>
+                </ram:ApplicableSPSClassification>
+                <ram:PhysicalSPSPackage>
+                    <ram:LevelCode>1</ram:LevelCode>
+                    <ram:TypeCode>BG</ram:TypeCode>
+                    <ram:ItemQuantity>100.0000</ram:ItemQuantity>
+                </ram:PhysicalSPSPackage>
+                <ram:PhysicalSPSPackage>
+                    <ram:LevelCode>2</ram:LevelCode>
+                    <ram:TypeCode>BX</ram:TypeCode>
+                    <ram:ItemQuantity>20.0000</ram:ItemQuantity>
+                </ram:PhysicalSPSPackage>
+                <ram:OriginSPSCountry>
+                    <ram:ID>AR</ram:ID>
+                    <ram:Name>NULL</ram:Name>
+                    <ram:SubordinateSPSCountrySubDivision>
+                        <ram:Name>Valles de la Región Patagónica</ram:Name>
+                        <ram:HierarchicalLevelCode>0</ram:HierarchicalLevelCode>
+                    </ram:SubordinateSPSCountrySubDivision>
+                </ram:OriginSPSCountry>
+            </ram:IncludedSPSTradeLineItem>
+        </ram:IncludedSPSConsignmentItem>
+    </rsm:SPSConsignment>
+</rsm:SPSImportPermit>
