@@ -35,15 +35,15 @@ This document and the information contained herein is provided on an "AS IS" bas
 <!-- ======================================================================= -->
 <!-- ===== Import of Unqualified Data Type Schema Module               ===== -->
 <!-- ======================================================================= -->
-  <xsd:import namespace="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:21" schemaLocation="UnqualifiedDataType_21p0.xsd"/>
+  <xsd:import namespace="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:21" schemaLocation="../../data/standard/UnqualifiedDataType_21p0.xsd"/>
 <!-- ======================================================================= -->
 <!-- ===== Import of Qualified Data Type Schema Module                 ===== -->
 <!-- ======================================================================= -->
-  <xsd:import namespace="urn:un:unece:uncefact:data:Standard:QualifiedDataType:21" schemaLocation="QualifiedDataType_21p0.xsd"/>
+  <xsd:import namespace="urn:un:unece:uncefact:data:Standard:QualifiedDataType:21" schemaLocation="../../data/standard/QualifiedDataType_21p0.xsd"/>
 <!-- ================================================================================== -->
 <!-- ===== Import of Reusable Aggregate Business Information Entity Schema Module ===== -->
 <!-- ================================================================================== -->
-  <xsd:import namespace="urn:sgcan:intercom:data:standard:INTERCOMSPSImportPermitReusableAggregateBusinessInformationEntity:1" schemaLocation="INTERCOMSPSImportPermitReusableAggregateBusinessInformationEntity_21p0.xsd"/>
+  <xsd:import namespace="urn:sgcan:intercom:data:standard:INTERCOMSPSImportPermitReusableAggregateBusinessInformationEntity:1" schemaLocation="../../data/standard/INTERCOMSPSImportPermitReusableAggregateBusinessInformationEntity_21p0.xsd"/>
 
 
 
