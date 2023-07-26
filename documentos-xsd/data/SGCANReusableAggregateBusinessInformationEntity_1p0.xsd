@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ============================================================================ -->
+<!-- ===== SGCAN Reusable Aggregate Business Information Entity Schema Module === -->
+<!-- ============================================================================ -->
+<!--
+Schema agency:  SGCAN
+Schema version: 1.0
+Schema date:   	17 noviembre 2022
+-->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:usersgcan="urn:sgcan:data:standard:SGCANReusableAggregateBusinessInformationEntity:1"
+	xmlns:clm63155CommunicationChannelCode="urn:un:unece:uncefact:codelist:standard:UNECE:CommunicationMeansTypeCode:D16B"
+	xmlns:SGCANDTAICustomsTypeCode="urn:sgcan:codelist:standard:SGCAN:DTAICustomsTypeCode:1"
+	xmlns:clm63227="urn:un:unece:uncefact:codelist:standard:UNECE:LocationFunctionCode:D16B"
+	xmlns:clm67065="urn:un:unece:uncefact:codelist:standard:UNECE:PackageTypeCode:2006"
+	xmlns:ids5ISO316612A="urn:un:unece:uncefact:identifierlist:standard:ISO:ISOTwo-letterCountryCode:SecondEdition2006"
+	xmlns:clm61001="urn:un:unece:uncefact:codelist:standard:UNECE:DocumentNameCode:D16B"
+	xmlns:dc="urn:wco:datamodel:WCO:Declaration_DS:1"
+	targetNamespace="urn:sgcan:data:standard:SGCANReusableAggregateBusinessInformationEntity:1"
+	elementFormDefault="qualified" attributeFormDefault="unqualified"
+	version="1.0">
+
+	<!-- ======================================================================= -->
+	<!-- ===== Imports                                                     ===== -->
+	<!-- ======================================================================= -->
+
+	<xs:import namespace="urn:un:unece:uncefact:codelist:standard:UNECE:CommunicationMeansTypeCode:D16B" schemaLocation="../codelist/standard/UNECE_CommunicationMeansTypeCode_D16B.xsd" />
+	<xs:import namespace="urn:un:unece:uncefact:codelist:standard:UNECE:LocationFunctionCode:D16B" schemaLocation="../codelist/standard/UNECE_LocationFunctionCode_D16B.xsd" />
+	<xs:import namespace="urn:un:unece:uncefact:identifierlist:standard:ISO:ISOTwo-letterCountryCode:SecondEdition2006" schemaLocation="../identifierlist/ISO_ISOTwo-letterCountryCode_SecondEdition2006.xsd" />
+	<xs:import namespace="urn:wco:datamodel:WCO:Declaration_DS:1" schemaLocation="../data/standard/Declaration/Declaration_1p0_urn_wco_datamodel_WCO_Declaration_DS_1.xsd" />
+	<xs:import namespace="urn:sgcan:codelist:standard:SGCAN:DTAICustomsTypeCode:1" schemaLocation="../codelist/standard/SGCAN_DTAICustomsTypeCode.xsd" />
+	<xs:import namespace="urn:un:unece:uncefact:codelist:standard:UNECE:DocumentNameCode:D16B" schemaLocation="../codelist/standard/UNECE_DocumentNameCode_D16B.xsd" />
+	
+
+	<!-- ======================================================================= -->
+	<!-- ===== Element Declarations                                        ===== -->
+	<!-- ======================================================================= -->
+
+	<xs:element name="DTAI" type="usersgcan:DTAIType"></xs:element>
+
+	<!-- ================================================================== -->
+	<!-- ===== Type Definitions                                       ===== -->
+	<!-- ================================================================== -->
+	<!-- ===== Type Definition: Document DTAI Type   ===== -->
+	<!-- ================================================================== -->
+
+	<xs:complexType name="DTAIType">
+		<xs:sequence>
+			<xs:element name="Declaration">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="TypeCode" type="dc:DeclarationTypeCodeType" default="950" minOccurs="0" />
+						<xs:element name="ID" type="dc:DeclarationIdentificationIDType" />
+						<xs:element name="Carrier">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Name" type="dc:CarrierNameTextType" />
+									<xs:element name="ID" type="dc:CarrierIdentificationIDType" />
+									<xs:element name="Address">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="TypeCode" type="dc:AddressTypeCodeType" minOccurs="0" />
+												<xs:element name="CityName" type="dc:AddressCityNameTextType" />
+												<xs:element name="CountryCode" type="ids5ISO316612A:ISOTwoletterCountryCodeContentType" />
+												<xs:element name="Line" type="dc:AddressLineTextType" minOccurs="0" />
+												<xs:element name="CountrySubDivisionCode" type="dc:AddressCountrySubDivisionCodeType" minOccurs="0" />
+												<xs:element name="CountrySubDivisionName" type="dc:AddressCountrySubDivisionNameTextType" minOccurs="0" />
+												<xs:element name="PostcodeID" type="dc:AddressPostcodeIDType" minOccurs="0" />
+												<xs:element name="StreetName" type="dc:AddressStreetNameTextType" minOccurs="0" />
+												<xs:element name="StreetNumberNumeric" type="dc:AddressStreetNumberNumericType" minOccurs="0" />
+												<xs:element name="StreetNumberAddition" type="dc:AddressStreetNumberAdditionTextType" minOccurs="0" />
+												<xs:element name="PostOfficeBoxID" type="dc:AddressPostOfficeBoxIDType" minOccurs="0" />
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="Communication" minOccurs="0" maxOccurs="unbounded">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="ID" type="dc:CommunicationIdentificationIDType" />
+												<xs:element name="TypeCode" type="clm63155CommunicationChannelCode:CommunicationMeansTypeCodeContentType" />
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="DeclarantImporter">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Name" type="dc:DeclarantNameTextType" />
+									<xs:element name="ID" type="dc:DeclarantIdentificationIDType" />
+									<xs:element name="RoleCode" type="dc:DeclarantRoleCodeType" />
+									<xs:element name="Address">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="Line" type="dc:AddressLineTextType" minOccurs="0" />
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="NationalReference">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="ID" type="dc:NationalReferenceIdentificationIDType" />
+												<xs:element name="IssuingCountryCode" type="dc:NationalReferenceIssuingCountryCodeType" minOccurs="0" />
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="Exporter">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Name" type="dc:ExporterNameTextType" />
+									<xs:element name="ID" type="dc:ExporterIdentificationIDType" />
+									<xs:element name="Address" minOccurs="0">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="TypeCode" type="dc:AddressTypeCodeType" minOccurs="0" />
+												<xs:element name="Line" type="dc:AddressLineTextType" minOccurs="0" />
+												<xs:element name="CountryCode" type="ids5ISO316612A:ISOTwoletterCountryCodeContentType" minOccurs="0" />
+												<xs:element name="CityName" type="dc:AddressCityNameTextType" minOccurs="0" />
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="Communication" minOccurs="0" maxOccurs="unbounded">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="ID" type="dc:CommunicationIdentificationIDType" />
+												<xs:element name="TypeCode" type="clm63155CommunicationChannelCode:CommunicationMeansTypeCodeContentType" />
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="Importer">
+							<xs:annotation>
+								<xs:documentation>
+									<SuperClassID>SC4</SuperClassID>
+									<SuperClassName>Party</SuperClassName>
+								</xs:documentation>
+								<xs:documentation xml:lang="es">
+									<WCOClassID>74A</WCOClassID>
+									<WCOClassName>Importer</WCOClassName>
+								</xs:documentation>
+								<xs:documentation>
+									<DictionaryEntryName>Importer. Details</DictionaryEntryName>
+									<UniqueLPCOClassID>1646L</UniqueLPCOClassID>
+									<BIPUsageLPCO>X</BIPUsageLPCO>
+								</xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Name" type="dc:ImporterNameTextType">
+										<xs:annotation>
+											<xs:documentation xml:lang="EN">
+												<WCOFormat>an..70</WCOFormat>
+											</xs:documentation>
+											<xs:documentation>
+												<TDEDUID>3036</TDEDUID>
+												<TDEDName>Party.Name.Text</TDEDName>
+												<SuperClassID>SC4</SuperClassID>
+												<SuperClassName>Party</SuperClassName>
+												<SuperClassElementID>S008</SuperClassElementID>
+												<SuperClassElementName>name</SuperClassElementName>
+											</xs:documentation>
+											<xs:documentation xml:lang="EN">
+												<WCOAttributeID>R037</WCOAttributeID>
+												<WCOAttributeName>Importer - name</WCOAttributeName>
+												<WCOAttributeDescription>Name of party who makes -or on whose behalf a Customs clearing agent or other authorized person makes - an import declaration. This may include a person who has possession of the goods or to whom the goods are consigned</WCOAttributeDescription>
+												<CoreDataType>Text</CoreDataType>
+											</xs:documentation>
+											<xs:documentation>
+												<DictionaryEntryName>Importer. Name. Text</DictionaryEntryName>
+												<NamedComplexType>ImporterNameTextType</NamedComplexType>
+												<XMLTag>Name</XMLTag>
+												<SuperClassTypeParty>X</SuperClassTypeParty>
+											</xs:documentation>
+											<xs:documentation xml:lang="EN">
+												<WCOClassID>74A</WCOClassID>
+												<WCOClassName>Importer</WCOClassName>
+											</xs:documentation>
+											<xs:documentation>
+												<UniquePositionID>159</UniquePositionID>
+												<BIPUsageLPCO>X</BIPUsageLPCO>
+												<UniqueLPCOClassID>1646L</UniqueLPCOClassID>
+											</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="ID" type="dc:ImporterIdentificationIDType">
+										<xs:annotation>
+											<xs:documentation xml:lang="EN">
+												<WCOFormat>an..35</WCOFormat>
+											</xs:documentation>
+											<xs:documentation>
+												<TDEDUID>3039</TDEDUID>
+												<TDEDName>Party. Identifier</TDEDName>
+												<SuperClassID>SC4</SuperClassID>
+												<SuperClassName>Party</SuperClassName>
+												<SuperClassElementID>S009</SuperClassElementID>
+												<SuperClassElementName>identification</SuperClassElementName>
+											</xs:documentation>
+											<xs:documentation xml:lang="EN">
+												<WCOAttributeID>R038</WCOAttributeID>
+												<WCOAttributeName>Importer, coded</WCOAttributeName>
+												<WCOAttributeDescription>Identifier of party who makes - or on whose behalf a Customs clearing agent or other authorised person makes - an import declaration. This may include a person who has possession of the goods or to whom the goods are consigned</WCOAttributeDescription>
+												<WCOCodeRemarks>International codes (e.g. DUNS, EAN) or user codes</WCOCodeRemarks>
+												<CoreDataType>Identifier</CoreDataType>
+											</xs:documentation>
+											<xs:documentation>
+												<DictionaryEntryName>Importer. Identification. Identifier</DictionaryEntryName>
+												<NamedComplexType>ImporterIdentificationIDType</NamedComplexType>
+												<XMLTag>ID</XMLTag>
+												<SuperClassTypeParty>X</SuperClassTypeParty>
+											</xs:documentation>
+											<xs:documentation xml:lang="EN">
+												<WCOClassID>74A</WCOClassID>
+												<WCOClassName>Importer</WCOClassName>
+											</xs:documentation>
+											<xs:documentation>
+												<UniquePositionID>160</UniquePositionID>
+												<BIPUsageLPCO>X</BIPUsageLPCO>
+												<UniqueLPCOClassID>1646L</UniqueLPCOClassID>
+											</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="Address" minOccurs="0">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="TypeCode" type="dc:AddressTypeCodeType" minOccurs="0" />
+												<xs:element name="Line" type="dc:AddressLineTextType" minOccurs="0" />
+												<xs:element name="CountryCode" type="ids5ISO316612A:ISOTwoletterCountryCodeContentType" minOccurs="0" />
+												<xs:element name="CityName" type="dc:AddressCityNameTextType" minOccurs="0" />
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="Communication" minOccurs="0" maxOccurs="unbounded">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="ID" type="dc:CommunicationIdentificationIDType" />
+												<xs:element name="TypeCode" type="clm63155CommunicationChannelCode:CommunicationMeansTypeCodeContentType" />
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="Consignee">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Name" type="dc:ConsigneeNameTextType"  />
+									<xs:element name="ID" type="dc:ConsigneeIdentificationIDType" />
+									<xs:element name="Address" minOccurs="0">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="TypeCode" type="dc:AddressTypeCodeType" minOccurs="0" />
+												<xs:element name="Line" type="dc:AddressLineTextType" minOccurs="0" />
+												<xs:element name="CountryCode" type="ids5ISO316612A:ISOTwoletterCountryCodeContentType" minOccurs="0" />
+												<xs:element name="CityName" type="dc:AddressCityNameTextType" minOccurs="0" />
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="Communication" minOccurs="0" maxOccurs="unbounded">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="ID" type="dc:CommunicationIdentificationIDType" />
+												<xs:element name="TypeCode" type="clm63155CommunicationChannelCode:CommunicationMeansTypeCodeContentType" />
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="GoodsLocation" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="TypeCode" type="clm63227:LocationFunctionCodeContentType" />
+									<xs:element name="Name" type="dc:GoodsLocationNameTextType" minOccurs="0" />
+									<xs:element name="ID" type="SGCANDTAICustomsTypeCode:CustomsCodeType" />
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="Origin">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="CountryCode" type="ids5ISO316612A:ISOTwoletterCountryCodeContentType" />
+									<xs:element name="TypeCode" type="dc:OriginTypeCodeType" minOccurs="0" />
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="ArrivalTransportMeans" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="ID" type="dc:ArrivalTransportMeansIdentificationIDType" minOccurs="0" />
+									<xs:element name="TypeCode" type="dc:ArrivalTransportMeansTypeCodeType" minOccurs="0" />
+									<xs:element name="RegistrationNationalityCode" type="dc:ArrivalTransportMeansRegistrationNationalityCodeType" minOccurs="0" />
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="PlateCountryRegistrationCargoUnits">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Plates" maxOccurs="unbounded" type="xs:string" />
+									<xs:element name="CountryCode" type="ids5ISO316612A:ISOTwoletterCountryCodeContentType" />
+									<xs:element name="AdditionalInformation" minOccurs="0" maxOccurs="unbounded">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="Content" type="dc:AdditionalInformationContentTextType" minOccurs="0" />
+												<xs:element name="StatementCode" type="dc:AdditionalInformationStatementCodeType" minOccurs="0" />
+												<xs:element name="StatementDescription" type="dc:AdditionalInformationStatementDescriptionTextType" minOccurs="0" />
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="AdditionalDocument" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="TypeCode" type="dc:AdditionalDocumentTypeCodeType" default="950" />
+									<xs:element name="ID" type="dc:AdditionalDocumentIdentificationIDType" />
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="TransportEquipment" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="ID" type="dc:TransportEquipmentIdentificationIDType" maxOccurs="unbounded" />
+									<xs:element name="CharacteristicCode" type="dc:TransportEquipmentCharacteristicCodeType" maxOccurs="unbounded" />
+									<xs:element name="Seal">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="ID" type="dc:SealIdentificationIDType" />
+												<xs:element name="TypeCode" type="dc:SealTypeCodeType" minOccurs="0" />
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="AssociatedTransportDocument" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="ID" type="dc:AssociatedTransportDocumentIdentificationIDType" minOccurs="0" />
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="GoodsShipment">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="GovernmentAgencyGoodsItem" maxOccurs="unbounded">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="Commodity" maxOccurs="unbounded">
+													<xs:complexType>
+														<xs:sequence>
+															<xs:element name="Description" type="dc:CommodityDescriptionTextType" minOccurs="0" />
+														</xs:sequence>
+													</xs:complexType>
+												</xs:element>
+												<xs:element name="Packaging" maxOccurs="unbounded">
+													<xs:complexType>
+														<xs:sequence>
+															<xs:element name="TypeCode" type="dc:PackagingTypeCodeType" />
+															<xs:element name="MarksNumbersID" type="dc:PackagingMarksNumbersIDType" />
+															<xs:element name="SequenceNumeric" type="dc:PackagingSequenceNumericType" />
+														</xs:sequence>
+													</xs:complexType>
+												</xs:element>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="GoodsMeasure">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="GrossMassMeasure" type="dc:GoodsMeasureGrossMassMeasureType" />
+												<xs:element name="NetNetWeightMeasure" type="dc:GoodsMeasureNetNetWeightMeasureType" />
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="Packaging" maxOccurs="unbounded">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="QuantityQuantity" type="dc:PackagingQuantityQuantityType" />
+												<xs:element name="VolumeMeasure" type="dc:PackagingVolumeMeasureType" />
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="Commodity" maxOccurs="unbounded">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="ValueAmount" type="dc:CommodityValueAmountType" />
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="GoodsLocation" minOccurs="0" maxOccurs="unbounded">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="Address">
+													<xs:complexType>
+														<xs:sequence>
+															<xs:element name="TypeCode" type="dc:AddressTypeCodeType" minOccurs="0" />
+															<xs:element name="CountryCode" type="dc:AddressCountryCodeType" />
+														</xs:sequence>
+													</xs:complexType>
+												</xs:element>
+												<xs:element name="Name" type="dc:GoodsLocationNameTextType" minOccurs="0" />
+												<xs:element name="ID" type="SGCANDTAICustomsTypeCode:CustomsCodeType" />
+												<xs:element name="TypeCode" type="clm63227:LocationFunctionCodeContentType" minOccurs="0" />
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="Declarant">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="ID" type="dc:DeclarantIdentificationIDType" />
+									<xs:element name="Name" type="dc:DeclarantNameTextType" />
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="AdditionalInformation" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="Content" type="dc:AdditionalInformationContentTextType" minOccurs="0" />									
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+			
+
+</xs:schema>

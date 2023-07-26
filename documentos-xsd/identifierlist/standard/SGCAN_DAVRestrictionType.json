@@ -1,0 +1,69 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"description": "INTERCOM - Tipo de restriccion",
+	"type": "object",
+	"properties": {
+		"DAVRestrictionType": {
+			"$ref": "#/definitions/.DAVRestrictionType"
+		}
+	},
+	"additionalProperties": false,
+	"definitions": {
+		".DAVRestrictionType": {
+			"$ref": "#/definitions/DAVRestrictionType"
+		},
+		"DAVRestrictionType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/RestrictionTypeCodeList"
+				},
+				"@schemeAgencyID": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeDataURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeID": {
+					"$ref": "#/definitions/token"
+				},
+				"@schemeName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeVersionID": {
+					"$ref": "#/definitions/token"
+				}
+			},
+			"required": [
+				"@schemeID"
+			],
+			"additionalProperties": false
+		},
+		"RestrictionTypeCodeList": {
+			"type": "string",
+			"enum": [
+				"01",
+				"02",
+				"03",
+				"04"
+			]
+		},
+		"anyURI": {
+			"type": "string",
+			"format": "uri"
+		},
+		"string": {
+			"type": "string"
+		},
+		"token": {
+			"type": "string",
+			"pattern": "^\\S+$"
+		}
+	}
+}

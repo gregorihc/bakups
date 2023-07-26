@@ -1,0 +1,735 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"description": "DAV",
+	"type": "object",
+	"properties": {
+		"Declaration": {
+			"$ref": "#/definitions/Declaration"
+		}
+	},
+	"additionalProperties": false,
+	"definitions": {
+		"Declaration": {
+			"type": "object",
+			"properties": {
+				"ID": {
+					"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/DeclarationIdentificationIDType"
+				},
+				"IssueDateTime": {
+					"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/DeclarationIssueDateTimeType"
+				},
+				"AdditionalDocument": {
+					"type": "object",
+					"properties": {
+						"CategoryCode": {
+							"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/CustomResolutionAdditionalDocumentCategoryCodeType"
+						},
+						"Name": {
+							"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/AdditionalDocumentNameTextType"
+						},
+						"ID": {
+							"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/AdditionalDocumentIdentificationIDType"
+						},
+						"IssueDateTime": {
+							"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/AdditionalDocumentIssueDateTimeType"
+						},
+						"TypeCode": {
+							"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/AdditionalDocumentTypeCodeType"
+						}
+					},
+					"additionalProperties": false
+				},
+				"Importer": {
+					"type": "object",
+					"properties": {
+						"Name": {
+							"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/ImporterNameTextType"
+						},
+						"ID": {
+							"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/ImporterIdentificationIDType"
+						},
+						"Address": {
+							"type": "array",
+							"minItems": 0,
+							"items": {
+								"type": "object",
+								"properties": {
+									"Line": {
+										"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/AddressLineTextType"
+									},
+									"CityName": {
+										"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/AddressCityNameTextType"
+									},
+									"CountryCode": {
+										"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/AddressCountryCodeType"
+									},
+									"TypeCode": {
+										"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/AddressTypeCodeType"
+									}
+								},
+								"additionalProperties": false
+							}
+						},
+						"Communication": {
+							"type": "array",
+							"minItems": 0,
+							"items": {
+								"type": "object",
+								"properties": {
+									"ID": {
+										"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/CommunicationIdentificationIDType"
+									},
+									"TypeCode": {
+										"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/CommunicationTypeCodeType"
+									}
+								},
+								"additionalProperties": false
+							}
+						},
+						"AdditionalIdentifier": {
+							"type": "array",
+							"minItems": 1,
+							"items": {
+								"type": "object",
+								"properties": {
+									"ID": {
+										"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/CustomImporterAdditionalIdentifierIdentificationIDType"
+									},
+									"IdentificationIssuingCountryCode": {
+										"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/AdditionalIdentifierIdentificationIssuingCountryCodeType"
+									},
+									"Name": {
+										"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/AdditionalIdentifierNameTextType"
+									}
+								},
+								"required": [
+									"ID"
+								],
+								"additionalProperties": false
+							}
+						}
+					},
+					"required": [
+						"Name",
+						"ID",
+						"AdditionalIdentifier"
+					],
+					"additionalProperties": false
+				},
+				"GoodsShipment": {
+					"type": "object",
+					"properties": {
+						"Seller": {
+							"type": "object",
+							"properties": {
+								"Name": {
+									"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/SellerNameTextType"
+								},
+								"ID": {
+									"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/SellerIdentificationIDType"
+								},
+								"RoleCode": {
+									"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/SellerRoleCodeType"
+								},
+								"IdentificationIssuingCountryCode": {
+									"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/SellerIdentificationIssuingCountryCodeType"
+								},
+								"Address": {
+									"type": "array",
+									"minItems": 0,
+									"items": {
+										"type": "object",
+										"properties": {
+											"Line": {
+												"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/AddressLineTextType"
+											},
+											"CityName": {
+												"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/AddressCityNameTextType"
+											},
+											"CountryCode": {
+												"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/AddressCountryCodeType"
+											},
+											"TypeCode": {
+												"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/AddressTypeCodeType"
+											}
+										},
+										"additionalProperties": false
+									}
+								},
+								"Communication": {
+									"type": "array",
+									"minItems": 0,
+									"items": {
+										"type": "object",
+										"properties": {
+											"ID": {
+												"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/CommunicationIdentificationIDType"
+											},
+											"TypeCode": {
+												"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/CommunicationTypeCodeType"
+											}
+										},
+										"additionalProperties": false
+									}
+								},
+								"AdditionalIdentifier": {
+									"type": "object",
+									"properties": {
+										"ID": {
+											"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/CustomSellerAdditionalIdentifierIdentificationIDType"
+										},
+										"IdentificationIssuingCountryCode": {
+											"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/AdditionalIdentifierIdentificationIssuingCountryCodeType"
+										},
+										"SequenceNumeric": {
+											"type": "object",
+											"properties": {
+												"$extensionProperty": {
+													"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/AdditionalIdentifierSequenceNumericType"
+												}
+											},
+											"additionalProperties": false
+										}
+									},
+									"required": [
+										"ID"
+									],
+									"additionalProperties": false
+								}
+							},
+							"required": [
+								"Name",
+								"AdditionalIdentifier"
+							],
+							"additionalProperties": false
+						},
+						"AdditionalInformation": {
+							"type": "array",
+							"minItems": 1,
+							"maxItems": 14,
+							"items": {
+								"type": "object",
+								"properties": {
+									"Content": {
+										"type": "array",
+										"minItems": 0,
+										"maxItems": 5,
+										"items": {
+											"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/AdditionalInformationContentTextType"
+										}
+									},
+									"StatementCode": {
+										"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/AdditionalInformationStatementCodeType"
+									},
+									"StatementTypeCode": {
+										"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/AdditionalInformationStatementTypeCodeType"
+									},
+									"ReconciliationReasonCode": {
+										"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/AdditionalInformationReconciliationReasonCodeType"
+									},
+									"LimitDateTime": {
+										"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/AdditionalInformationLimitDateTimeType"
+									}
+								},
+								"required": [
+									"StatementTypeCode"
+								],
+								"additionalProperties": false
+							}
+						},
+						"Invoice": {
+							"type": "object",
+							"properties": {
+								"ID": {
+									"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/InvoiceIdentificationIDType"
+								},
+								"IssueDateTime": {
+									"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/InvoiceIssueDateTimeType"
+								},
+								"TypeCode": {
+									"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/InvoiceTypeCodeType"
+								}
+							},
+							"required": [
+								"ID",
+								"IssueDateTime"
+							],
+							"additionalProperties": false
+						},
+						"AdditionalDocument": {
+							"type": "object",
+							"properties": {
+								"LPCOExemptionCode": {
+									"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/AdditionalDocumentLPCOExemptionCodeType"
+								},
+								"CategoryCode": {
+									"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/CustomCommercialTransactionAdditionalDocumentCategoryCodeType"
+								},
+								"TypeCode": {
+									"type": "string"
+								}
+							},
+							"required": [
+								"TypeCode"
+							],
+							"additionalProperties": false
+						},
+						"TransactionNatureCode": {
+							"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/GoodsShipmentTransactionNatureCodeType"
+						},
+						"TradeTerms": {
+							"type": "object",
+							"properties": {
+								"ConditionCode": {
+									"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/TradeTermsConditionCodeType"
+								},
+								"Description": {
+									"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/TradeTermsDescriptionTextType"
+								},
+								"LocationName": {
+									"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/TradeTermsLocationNameTextType"
+								},
+								"CountryCode": {
+									"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/TradeTermsCountryCodeType"
+								}
+							},
+							"required": [
+								"ConditionCode",
+								"LocationName"
+							],
+							"additionalProperties": false
+						},
+						"InvoiceAmount": {
+							"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/DeclarationInvoiceAmountType"
+						},
+						"Consignee": {
+							"type": "object",
+							"properties": {
+								"AdditionalIdentifier": {
+									"type": "object",
+									"properties": {
+										"ID": {
+											"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/CustomConsigneeAdditionalIdentifierIdentificationIDType"
+										}
+									},
+									"required": [
+										"ID"
+									],
+									"additionalProperties": false
+								},
+								"Name": {
+									"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/ConsigneeNameTextType"
+								},
+								"Address": {
+									"type": "object",
+									"properties": {
+										"Line": {
+											"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/AddressLineTextType"
+										},
+										"CityName": {
+											"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/AddressCityNameTextType"
+										},
+										"CountryCode": {
+											"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/AddressCountryCodeType"
+										},
+										"TypeCode": {
+											"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/AddressTypeCodeType"
+										}
+									},
+									"additionalProperties": false
+								},
+								"Communication": {
+									"type": "array",
+									"minItems": 0,
+									"items": {
+										"type": "object",
+										"properties": {
+											"ID": {
+												"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/CommunicationIdentificationIDType"
+											},
+											"TypeCode": {
+												"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/CommunicationTypeCodeType"
+											}
+										},
+										"additionalProperties": false
+									}
+								},
+								"RoleCode": {
+									"type": "string"
+								}
+							},
+							"required": [
+								"Name"
+							],
+							"additionalProperties": false
+						},
+						"CustomsValuation": {
+							"type": "object",
+							"properties": {
+								"ExitToEntryChargeAmount": {
+									"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/CustomsValuationExitToEntryChargeAmountType"
+								},
+								"FreightChargeAmount": {
+									"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/CustomsValuationFreightChargeAmountType"
+								},
+								"InsuranceAmount": {
+									"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/CustomsValuationInsuranceAmountType"
+								},
+								"ChargeDeduction": {
+									"type": "array",
+									"minItems": 0,
+									"maxItems": 4,
+									"items": {
+										"type": "object",
+										"properties": {
+											"ChargesTypeCode": {
+												"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/ChargeDeductionChargesTypeCodeType"
+											},
+											"OtherChargeDeductionAmount": {
+												"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/ChargeDeductionOtherChargeDeductionAmountType"
+											}
+										},
+										"required": [
+											"ChargesTypeCode",
+											"OtherChargeDeductionAmount"
+										],
+										"additionalProperties": false
+									}
+								}
+							},
+							"required": [
+								"ExitToEntryChargeAmount",
+								"FreightChargeAmount",
+								"InsuranceAmount"
+							],
+							"additionalProperties": false
+						},
+						"GovernmentAgencyGoodsItem": {
+							"type": "object",
+							"properties": {
+								"SequenceNumeric": {
+									"type": "object",
+									"properties": {
+										"$extensionProperty": {
+											"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/GovernmentAgencyGoodsItemSequenceNumericType"
+										}
+									},
+									"required": [
+										"$extensionProperty"
+									],
+									"additionalProperties": false
+								},
+								"Commodity": {
+									"type": "object",
+									"properties": {
+										"Classification": {
+											"type": "object",
+											"properties": {
+												"ID": {
+													"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/ClassificationIdentificationIDType"
+												}
+											},
+											"required": [
+												"ID"
+											],
+											"additionalProperties": false
+										},
+										"Description": {
+											"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/CommodityDescriptionTextType"
+										},
+										"ProductCharacteristics": {
+											"type": "array",
+											"minItems": 0,
+											"maxItems": 4,
+											"items": {
+												"type": "object",
+												"properties": {
+													"Description": {
+														"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/ProductCharacteristicsDescriptionTextType"
+													},
+													"QualifierCode": {
+														"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/ProductCharacteristicsQualifierCodeType"
+													}
+												},
+												"required": [
+													"Description",
+													"QualifierCode"
+												],
+												"additionalProperties": false
+											}
+										},
+										"CategoryCode": {
+											"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/CommodityCategoryCodeType"
+										},
+										"PhysicalStateCode": {
+											"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/CommodityPhysicalStateCodeType"
+										},
+										"ManufactureDateTime": {
+											"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/CommodityManufactureDateTimeType"
+										},
+										"CountQuantity": {
+											"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/CommodityCountQuantityType"
+										},
+										"InvoiceLine": {
+											"type": "object",
+											"properties": {
+												"ItemChargeAmount": {
+													"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/InvoiceLineItemChargeAmountType"
+												}
+											},
+											"required": [
+												"ItemChargeAmount"
+											],
+											"additionalProperties": false
+										}
+									},
+									"required": [
+										"Classification",
+										"PhysicalStateCode",
+										"CountQuantity"
+									],
+									"additionalProperties": false
+								},
+								"CustomsValuation": {
+									"type": "object",
+									"properties": {
+										"ExitToEntryChargeAmount": {
+											"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/CustomsValuationExitToEntryChargeAmountType"
+										},
+										"InsuranceAmount": {
+											"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/CustomsValuationInsuranceAmountType"
+										},
+										"MethodCode": {
+											"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/CustomsValuationMethodCodeType"
+										},
+										"ChargeDeduction": {
+											"type": "array",
+											"minItems": 1,
+											"maxItems": 13,
+											"items": {
+												"type": "object",
+												"properties": {
+													"ChargesTypeCode": {
+														"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/ChargeDeductionChargesTypeCodeType"
+													},
+													"OtherChargeDeductionAmount": {
+														"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/ChargeDeductionOtherChargeDeductionAmountType"
+													},
+													"CurrencyExchange": {
+														"type": "array",
+														"minItems": 0,
+														"items": {
+															"type": "object",
+															"properties": {
+																"CurrencyTypeCode": {
+																	"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/CurrencyExchangeCurrencyTypeCodeType"
+																},
+																"RateNumeric": {
+																	"type": [
+																		"object",
+																		"number"
+																	],
+																	"properties": {
+																		"$extensionProperty": {
+																			"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/CurrencyExchangeRateNumericType"
+																		}
+																	},
+																	"additionalProperties": false
+																}
+															},
+															"additionalProperties": false
+														}
+													}
+												},
+												"additionalProperties": false
+											}
+										}
+									},
+									"required": [
+										"ChargeDeduction"
+									],
+									"additionalProperties": false
+								},
+								"ProvisionalEstimatedValues": {
+									"type": "object",
+									"properties": {
+										"ProvisionalEstimatedValue": {
+											"type": "array",
+											"minItems": 1,
+											"items": {
+												"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/EstimedValueType"
+											}
+										}
+									},
+									"required": [
+										"ProvisionalEstimatedValue"
+									],
+									"additionalProperties": false
+								},
+								"AdditionalDocument": {
+									"type": "object",
+									"properties": {
+										"ID": {
+											"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/AdditionalDocumentIdentificationIDType"
+										},
+										"IssueDateTime": {
+											"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/AdditionalDocumentIssueDateTimeType"
+										},
+										"TypeCode": {
+											"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/AdditionalDocumentTypeCodeType"
+										}
+									},
+									"additionalProperties": false
+								},
+								"AdditionalInformation": {
+									"type": "array",
+									"minItems": 0,
+									"items": {
+										"type": "object",
+										"properties": {
+											"StatementTypeCode": {
+												"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/AdditionalInformationStatementTypeCodeType"
+											},
+											"Content": {
+												"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/AdditionalInformationContentTextType"
+											}
+										},
+										"additionalProperties": false
+									}
+								},
+								"Origin": {
+									"type": "object",
+									"properties": {
+										"CountryCode": {
+											"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/OriginCountryCodeType"
+										}
+									},
+									"required": [
+										"CountryCode"
+									],
+									"additionalProperties": false
+								},
+								"GoodsLocation": {
+									"type": "array",
+									"minItems": 0,
+									"maxItems": 2,
+									"items": {
+										"type": "object",
+										"properties": {
+											"TypeCode": {
+												"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/GoodsLocationTypeCodeType"
+											},
+											"ID": {
+												"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/GoodsLocationIdentificationIDType"
+											}
+										},
+										"required": [
+											"TypeCode",
+											"ID"
+										],
+										"additionalProperties": false
+									}
+								}
+							},
+							"required": [
+								"SequenceNumeric",
+								"Commodity",
+								"CustomsValuation"
+							],
+							"additionalProperties": false
+						}
+					},
+					"required": [
+						"AdditionalInformation",
+						"TransactionNatureCode",
+						"TradeTerms",
+						"InvoiceAmount",
+						"CustomsValuation",
+						"GovernmentAgencyGoodsItem"
+					],
+					"additionalProperties": false
+				},
+				"Declarant": {
+					"type": "object",
+					"properties": {
+						"Name": {
+							"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/DeclarantNameTextType"
+						},
+						"ID": {
+							"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/DeclarantIdentificationIDType"
+						},
+						"Address": {
+							"type": "object",
+							"properties": {
+								"CityName": {
+									"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/AddressCityNameTextType"
+								},
+								"Line": {
+									"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/AddressLineTextType"
+								}
+							},
+							"additionalProperties": false
+						},
+						"Communication": {
+							"type": "object",
+							"properties": {
+								"ID": {
+									"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/CommunicationIdentificationIDType"
+								},
+								"TypeCode": {
+									"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/CommunicationTypeCodeType"
+								}
+							},
+							"additionalProperties": false
+						},
+						"Contact": {
+							"type": "object",
+							"properties": {
+								"Name": {
+									"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/ContactNameTextType"
+								},
+								"FunctionCode": {
+									"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/ContactFunctionCodeType"
+								}
+							},
+							"additionalProperties": false
+						},
+						"Authentication": {
+							"type": "object",
+							"properties": {
+								"AuthorisedPerson": {
+									"type": "object",
+									"properties": {
+										"Name": {
+											"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/AuthorisedPersonNameTextType"
+										},
+										"ID": {
+											"$ref": "CustomsDeclarationINTERCOM_1p0.json#/definitions/AuthorisedPersonIdentificationIDType"
+										}
+									},
+									"additionalProperties": false
+								}
+							},
+							"required": [
+								"AuthorisedPerson"
+							],
+							"additionalProperties": false
+						}
+					},
+					"required": [
+						"Name",
+						"ID"
+					],
+					"additionalProperties": false
+				}
+			},
+			"required": [
+				"ID",
+				"IssueDateTime",
+				"Importer",
+				"Declarant"
+			],
+			"additionalProperties": false
+		}
+	}
+}

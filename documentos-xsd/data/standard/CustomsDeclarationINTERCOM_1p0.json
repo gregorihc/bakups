@@ -1,0 +1,5816 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"description": "INTERCOM - DAV - Custom Declaration datamodel WCO ",
+	"type": "object",
+	"properties": {
+		"DAVBroker": {
+			"$ref": "../../codelist/standard/SGCAN_DAVBroker.json#/definitions/DAVBroker:DAVBrokerType"
+		},
+		"DAVCommercialLevel": {
+			"$ref": "../../codelist/standard/SGCAN_DAVCommercialLevel.json#/definitions/DAVCommercialLevel:DAVCommercialLevelType"
+		},
+		"DAVCondition": {
+			"$ref": "../../codelist/standard/SGCAN_DAVCondition.json#/definitions/DAVCondition:DAVConditionType"
+		},
+		"DAVFormPayment": {
+			"$ref": "../../identifierlist/standard/SGCAN_DAVFormPayment.json#/definitions/DAVFormPayment:DAVFormPaymentType"
+		},
+		"DAVMethodPayment": {
+			"$ref": "../../identifierlist/standard/SGCAN_DAVMethodPayment.json#/definitions/DAVMethodPayment:DAVMethodPaymentType"
+		},
+		"DAVRestrictionType": {
+			"$ref": "../../identifierlist/standard/SGCAN_DAVRestrictionType.json#/definitions/DAVRestrictionType"
+		},
+		"DAVTransactionNature": {
+			"$ref": "../../codelist/standard/SGCAN_DAVTransactionNature.json#/definitions/DAVTransactionNature:DAVTransactionNatureType"
+		},
+		"DAVResolution": {
+			"$ref": "../../codelist/standard/SGCAN_DAVResolutionType.json#/definitions/SGCANDAVResolution:DAVResolutionType"
+		},
+		"ISO3AlphaCurrencyCode": {
+			"$ref": "../../codelist/standard/ISO_ISO3AlphaCurrencyCode_2012-08-31.json#/definitions/clm5ISO42173A:ISO3AlphaCurrencyCodeContentType"
+		},
+		"clm60133:CharacterSetEncodingCode": {
+			"$ref": "../../codelist/standard/UNECE_CharacterSetEncodingCode_40106.json#/definitions/clm60133:CharacterSetEncodingCodeContentType"
+		},
+		"clm63055:AgencyIdentificationCode": {
+			"$ref": "../../codelist/standard/UNECE_AgencyIdentificationCode_D16B.json#/definitions/clm63055:AgencyIdentificationCodeContentType"
+		},
+		"clm63155CommunicationChannelCode:CommunicationMeansTypeCode": {
+			"$ref": "../../codelist/standard/UNECE_CommunicationMeansTypeCode_D16B.json#/definitions/clm63155CommunicationChannelCode:CommunicationMeansTypeCodeContentType"
+		},
+		"clmIANACharacterSetCode:CharacterSetCode": {
+			"$ref": "../../codelist/standard/IANA_CharacterSetCode_2013-01-23.json#/definitions/clmIANACharacterSetCode:CharacterSetCodeContentType"
+		},
+		"ids5ISO316612A:ISOTwoletterCountryCode": {
+			"$ref": "../../identifierlist/standard/ISO_ISOTwo-letterCountryCode_SecondEdition2006.json#/definitions/ids5ISO316612A:ISOTwoletterCountryCodeContentType"
+		}
+	},
+	"additionalProperties": false,
+	"definitions": {
+		".DAVBroker:DAVBroker": {
+			"$ref": "../../codelist/standard/SGCAN_DAVBroker.json#/definitions/DAVBroker:DAVBrokerType"
+		},
+		".DAVCommercialLevel:DAVCommercialLevel": {
+			"$ref": "../../codelist/standard/SGCAN_DAVCommercialLevel.json#/definitions/DAVCommercialLevel:DAVCommercialLevelType"
+		},
+		".DAVCondition:DAVCondition": {
+			"$ref": "../../codelist/standard/SGCAN_DAVCondition.json#/definitions/DAVCondition:DAVConditionType"
+		},
+		".DAVFormPayment:DAVFormPayment": {
+			"$ref": "../../identifierlist/standard/SGCAN_DAVFormPayment.json#/definitions/DAVFormPayment:DAVFormPaymentType"
+		},
+		".DAVMethodPayment:DAVMethodPayment": {
+			"$ref": "../../identifierlist/standard/SGCAN_DAVMethodPayment.json#/definitions/DAVMethodPayment:DAVMethodPaymentType"
+		},
+		".DAVRestriction:DAVRestrictionType": {
+			"$ref": "../../identifierlist/standard/SGCAN_DAVRestrictionType.json#/definitions/DAVRestrictionType"
+		},
+		".DAVTransactionNature:DAVTransactionNature": {
+			"$ref": "../../codelist/standard/SGCAN_DAVTransactionNature.json#/definitions/DAVTransactionNature:DAVTransactionNatureType"
+		},
+		".SGCANDAVResolution:DAVResolution": {
+			"$ref": "../../codelist/standard/SGCAN_DAVResolutionType.json#/definitions/SGCANDAVResolution:DAVResolutionType"
+		},
+		".clm5ISO42173A:ISO3AlphaCurrencyCode": {
+			"$ref": "../../codelist/standard/ISO_ISO3AlphaCurrencyCode_2012-08-31.json#/definitions/clm5ISO42173A:ISO3AlphaCurrencyCodeContentType"
+		},
+		".clm60133:CharacterSetEncodingCode": {
+			"$ref": "../../codelist/standard/UNECE_CharacterSetEncodingCode_40106.json#/definitions/clm60133:CharacterSetEncodingCodeContentType"
+		},
+		".clm63055:AgencyIdentificationCode": {
+			"$ref": "../../codelist/standard/UNECE_AgencyIdentificationCode_D16B.json#/definitions/clm63055:AgencyIdentificationCodeContentType"
+		},
+		".clm63155CommunicationChannelCode:CommunicationMeansTypeCode": {
+			"$ref": "../../codelist/standard/UNECE_CommunicationMeansTypeCode_D16B.json#/definitions/clm63155CommunicationChannelCode:CommunicationMeansTypeCodeContentType"
+		},
+		".clmIANACharacterSetCode:CharacterSetCode": {
+			"$ref": "../../codelist/standard/IANA_CharacterSetCode_2013-01-23.json#/definitions/clmIANACharacterSetCode:CharacterSetCodeContentType"
+		},
+		".ids5ISO316612A:ISOTwoletterCountryCode": {
+			"$ref": "../../identifierlist/standard/ISO_ISOTwo-letterCountryCode_SecondEdition2006.json#/definitions/ids5ISO316612A:ISOTwoletterCountryCodeContentType"
+		},
+		"clmIANAMIMEMediaType:MIMEMediaTypeContentType": {
+			"type": "string"
+		},
+		"AdditionalDocumentAmountAmountType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/decimal"
+				},
+				"@currencyID": {
+					"$ref": "#/definitions/.clm5ISO42173A:ISO3AlphaCurrencyCode"
+				}
+			},
+			"additionalProperties": false
+		},
+		"AdditionalDocumentCategoryCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/token"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"AdditionalDocumentEffectiveDateTimeType": {
+			"type": "object",
+			"properties": {
+				"DateTimeString": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"AdditionalDocumentExpirationDateTimeType": {
+			"type": "object",
+			"properties": {
+				"DateTimeString": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"AdditionalDocumentFunctionalReferenceIDType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@schemeAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeDataURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeID": {
+					"$ref": "#/definitions/token"
+				},
+				"@schemeName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeVersionID": {
+					"$ref": "#/definitions/token"
+				}
+			},
+			"additionalProperties": false
+		},
+		"AdditionalDocumentIdentificationIDType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@schemeAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeDataURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeID": {
+					"$ref": "#/definitions/token"
+				},
+				"@schemeName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeVersionID": {
+					"$ref": "#/definitions/token"
+				}
+			},
+			"required": [
+				"$extensionProperty"
+			],
+			"additionalProperties": false
+		},
+		"AdditionalDocumentIssueDateTimeType": {
+			"type": "object",
+			"properties": {
+				"DateTimeString": {
+					"$ref": "#/definitions/string"
+				},
+				"formatCode": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"AdditionalDocumentIssueLocationIdentificationIDType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@schemeAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeDataURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeID": {
+					"$ref": "#/definitions/token"
+				},
+				"@schemeName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeVersionID": {
+					"$ref": "#/definitions/token"
+				}
+			},
+			"additionalProperties": false
+		},
+		"AdditionalDocumentIssueLocationNameTextType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"AdditionalDocumentIssuerNameTextType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"AdditionalDocumentIssuingPartyIDType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@schemeAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeDataURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeID": {
+					"$ref": "#/definitions/token"
+				},
+				"@schemeName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeVersionID": {
+					"$ref": "#/definitions/token"
+				}
+			},
+			"additionalProperties": false
+		},
+		"AdditionalDocumentLPCOExemptionCodeContentType": {
+			"type": "string"
+		},
+		"AdditionalDocumentLPCOExemptionCodeType": {
+			"type": "object",
+			"properties": {
+				"@schemeID": {
+					"$ref": "#/definitions/token"
+				},
+				"$extensionProperty": {
+					"$ref": "../../identifierlist/standard/SGCAN_DAVFormPayment.json#/definitions/DAVFormPayment:FormPaymentCodeList"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeAgencyID": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeDataURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeVersionID": {
+					"$ref": "#/definitions/token"
+				}
+			},
+			"required": [
+				"@schemeID"
+			],
+			"additionalProperties": false
+		},
+		"AdditionalDocumentLanguageCodeContentType": {
+			"type": "string"
+		},
+		"AdditionalDocumentLanguageCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/AdditionalDocumentLanguageCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"AdditionalDocumentNameTextType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"AdditionalDocumentQuantityQuantityType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/decimal"
+				},
+				"@unitCode": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"AdditionalDocumentTypeCodeContentType": {
+			"type": "string"
+		},
+		"AdditionalDocumentTypeCodeType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/AdditionalDocumentTypeCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"required": [
+				"$extensionProperty"
+			],
+			"additionalProperties": false
+		},
+		"AdditionalDocumentVerificationIndicatorType": {
+			"type": "object",
+			"properties": {
+				"Indicator": {
+					"$ref": "#/definitions/boolean"
+				},
+				"IndicatorString": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"AdditionalDocumentVersionIDType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@schemeAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeDataURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeID": {
+					"$ref": "#/definitions/token"
+				},
+				"@schemeName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeVersionID": {
+					"$ref": "#/definitions/token"
+				}
+			},
+			"additionalProperties": false
+		},
+		"AdditionalIdentifierIdentificationIDType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@schemeAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeDataURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeID": {
+					"$ref": "#/definitions/token"
+				},
+				"@schemeName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeVersionID": {
+					"$ref": "#/definitions/token"
+				}
+			},
+			"required": [
+				"@schemeID"
+			],
+			"additionalProperties": false
+		},
+		"AdditionalIdentifierIdentificationIssuingCountryCodeContentType": {
+			"type": "string"
+		},
+		"AdditionalIdentifierIdentificationIssuingCountryCodeType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/AdditionalIdentifierIdentificationIssuingCountryCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"AdditionalIdentifierNameTextType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"AdditionalIdentifierSequenceNumericType": {
+			"type": "number",
+			"minimum": 0
+		},
+		"AdditionalInformationContentTextType": {
+			"type": [
+				"object",
+				"string"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"required": [
+				"$extensionProperty"
+			],
+			"additionalProperties": false
+		},
+		"AdditionalInformationExportCertificateIndicatorType": {
+			"type": "object",
+			"properties": {
+				"Indicator": {
+					"$ref": "#/definitions/boolean"
+				},
+				"IndicatorString": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"AdditionalInformationLimitDateTimeType": {
+			"type": "object",
+			"properties": {
+				"DateTimeString": {
+					"$ref": "#/definitions/string"
+				},
+				"formatCode": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"AdditionalInformationReconciliationReasonCodeContentType": {
+			"type": "string"
+		},
+		"AdditionalInformationReconciliationReasonCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/AdditionalInformationReconciliationReasonCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"AdditionalInformationRequestOverrideCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/token"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"AdditionalInformationRequestedInspectionDateTimeType": {
+			"type": "object",
+			"properties": {
+				"DateTimeString": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"AdditionalInformationSequenceNumericType": {
+			"type": "number",
+			"minimum": 0
+		},
+		"AdditionalInformationStatementCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/token"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"AdditionalInformationStatementDescriptionTextType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"AdditionalInformationStatementTypeCodeContentType": {
+			"type": "string"
+		},
+		"AdditionalInformationStatementTypeCodeType": {
+			"type": [
+				"object",
+				"string"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/AdditionalInformationStatementTypeCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"required": [
+				"$extensionProperty"
+			],
+			"additionalProperties": false
+		},
+		"AddressCityNameTextType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"AddressCountryCodeContentType": {
+			"$ref": "#/definitions/.ids5ISO316612A:ISOTwoletterCountryCode"
+		},
+		"AddressCountryCodeType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/AddressCountryCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"AddressCountryNameTextType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"AddressCountrySubDivisionCodeContentType": {
+			"type": "string"
+		},
+		"AddressCountrySubDivisionCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/AddressCountrySubDivisionCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"AddressCountrySubDivisionNameTextType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"AddressLineTextType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"AddressPostOfficeBoxIDType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@schemeAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeDataURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeID": {
+					"$ref": "#/definitions/token"
+				},
+				"@schemeName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeVersionID": {
+					"$ref": "#/definitions/token"
+				}
+			},
+			"additionalProperties": false
+		},
+		"AddressPostcodeIDType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@schemeAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeDataURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeID": {
+					"$ref": "#/definitions/token"
+				},
+				"@schemeName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeVersionID": {
+					"$ref": "#/definitions/token"
+				}
+			},
+			"additionalProperties": false
+		},
+		"AddressStreetNameTextType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"AddressStreetNumberAdditionTextType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"AddressStreetNumberNumericType": {
+			"type": "number"
+		},
+		"AddressTypeCodeContentType": {
+			"type": "string"
+		},
+		"AddressTypeCodeType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/AddressTypeCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"AuthorisedPersonIdentificationIDType": {
+			"type": [
+				"object",
+				"string"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@schemeAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeDataURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeID": {
+					"$ref": "#/definitions/token"
+				},
+				"@schemeName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeVersionID": {
+					"$ref": "#/definitions/token"
+				}
+			},
+			"required": [
+				"$extensionProperty"
+			],
+			"additionalProperties": false
+		},
+		"AuthorisedPersonIdentificationIssuingCountryCodeContentType": {
+			"type": "string"
+		},
+		"AuthorisedPersonIdentificationIssuingCountryCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/AuthorisedPersonIdentificationIssuingCountryCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"AuthorisedPersonNameTextType": {
+			"type": [
+				"object",
+				"string"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"required": [
+				"$extensionProperty"
+			],
+			"additionalProperties": false
+		},
+		"AuthorisedPersonRoleCodeContentType": {
+			"type": "string"
+		},
+		"AuthorisedPersonRoleCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/AuthorisedPersonRoleCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"ChargeDeductionChargesTypeCodeContentType": {
+			"type": "string"
+		},
+		"ChargeDeductionChargesTypeCodeType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/ChargeDeductionChargesTypeCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"required": [
+				"$extensionProperty"
+			],
+			"additionalProperties": false
+		},
+		"ChargeDeductionOtherChargeDeductionAmountType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/decimal"
+				},
+				"@currencyID": {
+					"$ref": "#/definitions/.clm5ISO42173A:ISO3AlphaCurrencyCode"
+				}
+			},
+			"required": [
+				"$extensionProperty"
+			],
+			"additionalProperties": false
+		},
+		"ClassificationBindingTariffReferenceIDType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@schemeAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeDataURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeID": {
+					"$ref": "#/definitions/token"
+				},
+				"@schemeName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeVersionID": {
+					"$ref": "#/definitions/token"
+				}
+			},
+			"additionalProperties": false
+		},
+		"ClassificationDescriptionTextType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"ClassificationIdentificationIDType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@schemeAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeDataURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeID": {
+					"$ref": "#/definitions/token"
+				},
+				"@schemeName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeVersionID": {
+					"$ref": "#/definitions/token"
+				}
+			},
+			"required": [
+				"$extensionProperty"
+			],
+			"additionalProperties": false
+		},
+		"ClassificationIdentificationTypeCodeContentType": {
+			"type": "string"
+		},
+		"ClassificationIdentificationTypeCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/ClassificationIdentificationTypeCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"ClassificationNameCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/token"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"CommodityAcquisitionDateTimeType": {
+			"type": "object",
+			"properties": {
+				"DateTimeString": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"CommodityCargoDescriptionTextType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"CommodityCategoryCodeContentType": {
+			"type": "string"
+		},
+		"CommodityCategoryCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/CommodityCategoryCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"CommodityCategoryQualifierCodeContentType": {
+			"type": "string"
+		},
+		"CommodityCategoryQualifierCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/CommodityCategoryQualifierCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"CommodityCommercialCategorizationIDType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@schemeAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeDataURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeID": {
+					"$ref": "#/definitions/token"
+				},
+				"@schemeName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeVersionID": {
+					"$ref": "#/definitions/token"
+				}
+			},
+			"additionalProperties": false
+		},
+		"CommodityCommercialDescriptionTextType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"CommodityCountQuantityType": {
+			"type": [
+				"object",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/decimal"
+				},
+				"@unitCode": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"required": [
+				"$extensionProperty"
+			],
+			"additionalProperties": false
+		},
+		"CommodityDescriptionTextType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"CommodityGoodsGroupNameCodeContentType": {
+			"type": "string"
+		},
+		"CommodityGoodsGroupNameCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/CommodityGoodsGroupNameCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"CommodityGoodsGroupNameTextType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"CommodityIdentityQualifierCodeContentType": {
+			"type": "string"
+		},
+		"CommodityIdentityQualifierCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/CommodityIdentityQualifierCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"CommodityIntendedUseCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/token"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"CommodityIntendedUseTextType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"CommodityJurisdictionDateTimeType": {
+			"type": "object",
+			"properties": {
+				"DateTimeString": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"CommodityLotNumberIDType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@schemeAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeDataURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeID": {
+					"$ref": "#/definitions/token"
+				},
+				"@schemeName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeVersionID": {
+					"$ref": "#/definitions/token"
+				}
+			},
+			"additionalProperties": false
+		},
+		"CommodityMainComponentIndicatorType": {
+			"type": "object",
+			"properties": {
+				"Indicator": {
+					"$ref": "#/definitions/boolean"
+				},
+				"IndicatorString": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"CommodityManufactureDateTimeType": {
+			"type": "object",
+			"properties": {
+				"DateTimeString": {
+					"$ref": "#/definitions/string"
+				},
+				"formatCode": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"CommodityPhysicalStateCodeContentType": {
+			"type": "string"
+		},
+		"CommodityPhysicalStateCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/CommodityPhysicalStateCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"CommodityProductBestBeforeDateTimeType": {
+			"type": "object",
+			"properties": {
+				"DateTimeString": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"CommodityProductExpiryDateTimeType": {
+			"type": "object",
+			"properties": {
+				"DateTimeString": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"CommodityRelatedPackagingCertificationIndicatorType": {
+			"type": "object",
+			"properties": {
+				"Indicator": {
+					"$ref": "#/definitions/boolean"
+				},
+				"IndicatorString": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"CommodityRelatedPackagingDangerousGoodsPackingRequirementGroupCodeContentType": {
+			"type": "string"
+		},
+		"CommodityRelatedPackagingDangerousGoodsPackingRequirementGroupCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/CommodityRelatedPackagingDangerousGoodsPackingRequirementGroupCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"CommodityRelatedPackagingFillerDescriptionTextType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"CommodityRelatedPackagingHierarchyCodeContentType": {
+			"type": "string"
+		},
+		"CommodityRelatedPackagingHierarchyCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/CommodityRelatedPackagingHierarchyCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"CommodityRelatedPackagingInnermostUnitQuantityType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/decimal"
+				},
+				"@unitCode": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"CommodityRelatedPackagingLevelIndicatorType": {
+			"type": "object",
+			"properties": {
+				"Indicator": {
+					"$ref": "#/definitions/boolean"
+				},
+				"IndicatorString": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"CommodityRelatedPackagingMarkingTextType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"CommodityRelatedPackagingPackingMethodDescriptionTextType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"CommoditySensitiveGoodsCodeContentType": {
+			"type": "string",
+			"enum": [
+				"170",
+				"171",
+				"172"
+			]
+		},
+		"CommoditySensitiveGoodsCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/CommoditySensitiveGoodsCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"CommoditySequenceNumericType": {
+			"type": "number"
+		},
+		"CommoditySizeMeasureType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/decimal"
+				},
+				"@unitCode": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"CommodityValueAmountType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/decimal"
+				},
+				"@currencyID": {
+					"$ref": "#/definitions/.clm5ISO42173A:ISO3AlphaCurrencyCode"
+				}
+			},
+			"additionalProperties": false
+		},
+		"CommunicationIdentificationIDType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@schemeAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeDataURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeID": {
+					"$ref": "#/definitions/token"
+				},
+				"@schemeName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeVersionID": {
+					"$ref": "#/definitions/token"
+				}
+			},
+			"additionalProperties": false
+		},
+		"CommunicationTypeCodeContentType": {
+			"$ref": "#/definitions/.clm63155CommunicationChannelCode:CommunicationMeansTypeCode"
+		},
+		"CommunicationTypeCodeType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/CommunicationTypeCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"ConsigneeIdentificationIDType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@schemeAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeDataURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeID": {
+					"$ref": "#/definitions/token"
+				},
+				"@schemeName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeVersionID": {
+					"$ref": "#/definitions/token"
+				}
+			},
+			"additionalProperties": false
+		},
+		"ConsigneeIdentificationIssuingCountryCodeContentType": {
+			"type": "string"
+		},
+		"ConsigneeIdentificationIssuingCountryCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/ConsigneeIdentificationIssuingCountryCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"ConsigneeNameTextType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"ConsigneeRoleCodeContentType": {
+			"type": "string"
+		},
+		"ConsigneeRoleCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/ConsigneeRoleCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"ContactFunctionCodeContentType": {
+			"type": "string"
+		},
+		"ContactFunctionCodeType": {
+			"type": [
+				"object",
+				"string"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/ContactFunctionCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"required": [
+				"$extensionProperty"
+			],
+			"additionalProperties": false
+		},
+		"ContactNameTextType": {
+			"type": [
+				"object",
+				"string"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"required": [
+				"$extensionProperty"
+			],
+			"additionalProperties": false
+		},
+		"ContactOfficeIdentificationIDType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@schemeAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeDataURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeID": {
+					"$ref": "#/definitions/token"
+				},
+				"@schemeName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeVersionID": {
+					"$ref": "#/definitions/token"
+				}
+			},
+			"additionalProperties": false
+		},
+		"CurrencyExchangeCurrencyTypeCodeContentType": {
+			"type": "string"
+		},
+		"CurrencyExchangeCurrencyTypeCodeType": {
+			"type": [
+				"object",
+				"string"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/CurrencyExchangeCurrencyTypeCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"required": [
+				"$extensionProperty"
+			],
+			"additionalProperties": false
+		},
+		"CurrencyExchangeRateNumericType": {
+			"type": "number",
+			"minimum": 0
+		},
+		"CustomCommercialTransactionAdditionalDocumentCategoryCodeType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "../../identifierlist/standard/SGCAN_DAVMethodPayment.json#/definitions/DAVMethodPayment:MethodPaymentCodeList"
+				},
+				"@schemeID": {
+					"$ref": "#/definitions/token"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeAgencyID": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeDataURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeVersionID": {
+					"$ref": "#/definitions/token"
+				}
+			},
+			"required": [
+				"@schemeName"
+			],
+			"additionalProperties": false
+		},
+		"CustomConsigneeAdditionalIdentifierIdentificationIDType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/.DAVBroker:DAVBroker"
+				},
+				"@schemeName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@schemeAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeDataURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeID": {
+					"$ref": "#/definitions/token"
+				},
+				"@schemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeVersionID": {
+					"$ref": "#/definitions/token"
+				}
+			},
+			"required": [
+				"@schemeName"
+			],
+			"additionalProperties": false
+		},
+		"CustomImporterAdditionalIdentifierIdentificationIDType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/.DAVCommercialLevel:DAVCommercialLevel"
+				},
+				"@schemeID": {
+					"$ref": "#/definitions/token"
+				},
+				"@schemeAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@schemeAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeDataURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeVersionID": {
+					"$ref": "#/definitions/token"
+				}
+			},
+			"required": [
+				"@schemeID"
+			],
+			"additionalProperties": false
+		},
+		"CustomResolutionAdditionalDocumentCategoryCodeType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/.SGCANDAVResolution:DAVResolution"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"CustomSellerAdditionalIdentifierIdentificationIDType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/.DAVCondition:DAVCondition"
+				},
+				"@schemeAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@schemeAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeDataURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeID": {
+					"$ref": "#/definitions/token"
+				},
+				"@schemeName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeVersionID": {
+					"$ref": "#/definitions/token"
+				}
+			},
+			"required": [
+				"@schemeName"
+			],
+			"additionalProperties": false
+		},
+		"CustomsValuationExitToEntryChargeAmountType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/decimal"
+				},
+				"@currencyID": {
+					"$ref": "#/definitions/.clm5ISO42173A:ISO3AlphaCurrencyCode"
+				}
+			},
+			"required": [
+				"$extensionProperty"
+			],
+			"additionalProperties": false
+		},
+		"CustomsValuationFreightChargeAmountType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/decimal"
+				},
+				"@currencyID": {
+					"$ref": "#/definitions/.clm5ISO42173A:ISO3AlphaCurrencyCode"
+				}
+			},
+			"required": [
+				"$extensionProperty"
+			],
+			"additionalProperties": false
+		},
+		"CustomsValuationFreightChargeApportionmentCodeContentType": {
+			"type": "string"
+		},
+		"CustomsValuationFreightChargeApportionmentCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/CustomsValuationFreightChargeApportionmentCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"CustomsValuationInsuranceAmountType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/decimal"
+				},
+				"@currencyID": {
+					"$ref": "#/definitions/.clm5ISO42173A:ISO3AlphaCurrencyCode"
+				}
+			},
+			"required": [
+				"$extensionProperty"
+			],
+			"additionalProperties": false
+		},
+		"CustomsValuationMethodCodeContentType": {
+			"type": "string"
+		},
+		"CustomsValuationMethodCodeType": {
+			"type": [
+				"object",
+				"string"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/CustomsValuationMethodCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"required": [
+				"$extensionProperty"
+			],
+			"additionalProperties": false
+		},
+		"CustomsValuationPartyRelationshipCodeContentType": {
+			"type": "string",
+			"enum": [
+				"135",
+				"136",
+				"137"
+			]
+		},
+		"CustomsValuationPartyRelationshipCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/CustomsValuationPartyRelationshipCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"CustomsValuationPaymentTermsCodeContentType": {
+			"type": "string"
+		},
+		"CustomsValuationPaymentTermsCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/CustomsValuationPaymentTermsCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"DeclarantFunctionCodeContentType": {
+			"type": "string"
+		},
+		"DeclarantFunctionCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/DeclarantFunctionCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"DeclarantIdentificationIDType": {
+			"type": [
+				"object",
+				"string"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@schemeAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeDataURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeID": {
+					"$ref": "#/definitions/token"
+				},
+				"@schemeName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeVersionID": {
+					"$ref": "#/definitions/token"
+				}
+			},
+			"required": [
+				"$extensionProperty",
+				"@schemeID"
+			],
+			"additionalProperties": false
+		},
+		"DeclarantIdentificationIssuingCountryCodeContentType": {
+			"type": "string"
+		},
+		"DeclarantIdentificationIssuingCountryCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/DeclarantIdentificationIssuingCountryCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"DeclarantNameTextType": {
+			"type": [
+				"object",
+				"string"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"required": [
+				"$extensionProperty"
+			],
+			"additionalProperties": false
+		},
+		"DeclarantRoleCodeContentType": {
+			"type": "string"
+		},
+		"DeclarantRoleCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/DeclarantRoleCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"DeclarationAcceptanceDateTimeType": {
+			"type": "object",
+			"properties": {
+				"DateTimeString": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"DeclarationCancellationDateTimeType": {
+			"type": "object",
+			"properties": {
+				"DateTimeString": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"DeclarationDeclarationOfficeIDType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@schemeAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeDataURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeID": {
+					"$ref": "#/definitions/token"
+				},
+				"@schemeName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeVersionID": {
+					"$ref": "#/definitions/token"
+				}
+			},
+			"additionalProperties": false
+		},
+		"DeclarationEffectiveDateTimeType": {
+			"type": "object",
+			"properties": {
+				"DateTimeString": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"DeclarationExpirationDateTimeType": {
+			"type": "object",
+			"properties": {
+				"DateTimeString": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"DeclarationFunctionCodeContentType": {
+			"type": "string"
+		},
+		"DeclarationFunctionCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/DeclarationFunctionCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"DeclarationFunctionalReferenceIDType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@schemeAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeDataURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeID": {
+					"$ref": "#/definitions/token"
+				},
+				"@schemeName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeVersionID": {
+					"$ref": "#/definitions/token"
+				}
+			},
+			"additionalProperties": false
+		},
+		"DeclarationGoodsItemQuantityType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/decimal"
+				},
+				"@unitCode": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"DeclarationIdentificationIDType": {
+			"type": [
+				"object",
+				"string"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@schemeAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeDataURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeID": {
+					"$ref": "#/definitions/token"
+				},
+				"@schemeName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeVersionID": {
+					"$ref": "#/definitions/token"
+				}
+			},
+			"required": [
+				"$extensionProperty"
+			],
+			"additionalProperties": false
+		},
+		"DeclarationInvoiceAmountType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/decimal"
+				},
+				"@currencyID": {
+					"$ref": "#/definitions/.clm5ISO42173A:ISO3AlphaCurrencyCode"
+				}
+			},
+			"additionalProperties": false
+		},
+		"DeclarationIssueDateTimeType": {
+			"type": "object",
+			"properties": {
+				"DateTimeString": {
+					"$ref": "#/definitions/string"
+				},
+				"formatCode": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"DateTimeString"
+			],
+			"additionalProperties": false
+		},
+		"DeclarationIssueLocationIdentificationIDType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@schemeAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeDataURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeID": {
+					"$ref": "#/definitions/token"
+				},
+				"@schemeName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeVersionID": {
+					"$ref": "#/definitions/token"
+				}
+			},
+			"additionalProperties": false
+		},
+		"DeclarationJurisdictionDateTimeType": {
+			"type": "object",
+			"properties": {
+				"DateTimeString": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"DeclarationLanguageCodeContentType": {
+			"type": "string"
+		},
+		"DeclarationLanguageCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/DeclarationLanguageCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"DeclarationLoadingListQuantityType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/decimal"
+				},
+				"@unitCode": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"DeclarationOfficeActualIndicatorType": {
+			"type": "object",
+			"properties": {
+				"Indicator": {
+					"$ref": "#/definitions/boolean"
+				},
+				"IndicatorString": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"DeclarationOfficeIdentificationIDType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@schemeAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeDataURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeID": {
+					"$ref": "#/definitions/token"
+				},
+				"@schemeName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeVersionID": {
+					"$ref": "#/definitions/token"
+				}
+			},
+			"additionalProperties": false
+		},
+		"DeclarationRejectionDateTimeType": {
+			"type": "object",
+			"properties": {
+				"DateTimeString": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"DeclarationReplyTypeCodeContentType": {
+			"type": "string"
+		},
+		"DeclarationReplyTypeCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/DeclarationReplyTypeCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"DeclarationSealsAffixedQuantityType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/decimal"
+				},
+				"@unitCode": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"DeclarationSpecificCircumstancesCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/token"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"DeclarationSplitConsignmentQuantityType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/decimal"
+				},
+				"@unitCode": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"DeclarationStatusCodeContentType": {
+			"type": "string"
+		},
+		"DeclarationStatusCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/DeclarationStatusCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"DeclarationSubsequentDeclarationOfficeIDType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@schemeAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeDataURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeID": {
+					"$ref": "#/definitions/token"
+				},
+				"@schemeName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeVersionID": {
+					"$ref": "#/definitions/token"
+				}
+			},
+			"additionalProperties": false
+		},
+		"DeclarationTotalGrossMassMeasureType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/decimal"
+				},
+				"@unitCode": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"DeclarationTotalPackageQuantityType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/decimal"
+				},
+				"@unitCode": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"DeclarationTransportMovementCodeContentType": {
+			"type": "string"
+		},
+		"DeclarationTransportMovementCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/DeclarationTransportMovementCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"DeclarationTypeCodeContentType": {
+			"type": "string"
+		},
+		"DeclarationTypeCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/DeclarationTypeCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"DeclarationValidityDurationMeasureType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/decimal"
+				},
+				"@unitCode": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"DeclarationVersionIDType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@schemeAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeDataURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeID": {
+					"$ref": "#/definitions/token"
+				},
+				"@schemeName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeVersionID": {
+					"$ref": "#/definitions/token"
+				}
+			},
+			"additionalProperties": false
+		},
+		"EstimedValueType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/ValueType"
+				},
+				"@item": {
+					"$ref": "#/definitions/ItemDAVType"
+				}
+			},
+			"required": [
+				"$extensionProperty",
+				"@item"
+			],
+			"additionalProperties": false
+		},
+		"GoodsLocationIdentificationIDType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/.ids5ISO316612A:ISOTwoletterCountryCode"
+				},
+				"@schemeAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@schemeAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeDataURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeID": {
+					"$ref": "#/definitions/token"
+				},
+				"@schemeName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeVersionID": {
+					"$ref": "#/definitions/token"
+				}
+			},
+			"required": [
+				"$extensionProperty"
+			],
+			"additionalProperties": false
+		},
+		"GoodsLocationIdentificationTypeCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/token"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"GoodsLocationNameTextType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"GoodsLocationTypeCodeContentType": {
+			"type": "string"
+		},
+		"GoodsLocationTypeCodeType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/GoodsLocationTypeCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"required": [
+				"$extensionProperty"
+			],
+			"additionalProperties": false
+		},
+		"GoodsShipmentDispatchDateTimeType": {
+			"type": "object",
+			"properties": {
+				"DateTimeString": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"GoodsShipmentExitDateTimeType": {
+			"type": "object",
+			"properties": {
+				"DateTimeString": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"GoodsShipmentFreeTradeZoneStatusCodeContentType": {
+			"type": "string"
+		},
+		"GoodsShipmentFreeTradeZoneStatusCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/GoodsShipmentFreeTradeZoneStatusCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"GoodsShipmentGoodsStatusCodeContentType": {
+			"type": "string"
+		},
+		"GoodsShipmentGoodsStatusCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/GoodsShipmentGoodsStatusCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"GoodsShipmentSequenceNumericType": {
+			"type": "number",
+			"minimum": 0
+		},
+		"GoodsShipmentTransactionNatureCodeContentType": {
+			"type": "string"
+		},
+		"GoodsShipmentTransactionNatureCodeType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/.DAVTransactionNature:DAVTransactionNature"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"GovernmentAgencyGoodsItemCustomsValueAmountType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/decimal"
+				},
+				"@currencyID": {
+					"$ref": "#/definitions/.clm5ISO42173A:ISO3AlphaCurrencyCode"
+				}
+			},
+			"additionalProperties": false
+		},
+		"GovernmentAgencyGoodsItemGoodsStatusCodeContentType": {
+			"type": "string"
+		},
+		"GovernmentAgencyGoodsItemGoodsStatusCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/GovernmentAgencyGoodsItemGoodsStatusCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"GovernmentAgencyGoodsItemSequenceNumericType": {
+			"type": "number",
+			"minimum": 0
+		},
+		"GovernmentAgencyGoodsItemStatisticalValueAmountType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/decimal"
+				},
+				"@currencyID": {
+					"$ref": "#/definitions/.clm5ISO42173A:ISO3AlphaCurrencyCode"
+				}
+			},
+			"additionalProperties": false
+		},
+		"GovernmentAgencyGoodsItemTransactionNatureCodeContentType": {
+			"type": "string"
+		},
+		"GovernmentAgencyGoodsItemTransactionNatureCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/GovernmentAgencyGoodsItemTransactionNatureCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"GovernmentOfficerIdentificationIDType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@schemeAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeDataURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeID": {
+					"$ref": "#/definitions/token"
+				},
+				"@schemeName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeVersionID": {
+					"$ref": "#/definitions/token"
+				}
+			},
+			"additionalProperties": false
+		},
+		"GovernmentOfficerNameTextType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"GovernmentOfficerRoleCodeContentType": {
+			"type": "string"
+		},
+		"GovernmentOfficerRoleCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/GovernmentOfficerRoleCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"GovernmentProcedureCurrentCodeContentType": {
+			"type": "string"
+		},
+		"GovernmentProcedureCurrentCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/GovernmentProcedureCurrentCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"GovernmentProcedureDescriptionTextType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"GovernmentProcedurePreviousCodeContentType": {
+			"type": "string"
+		},
+		"GovernmentProcedurePreviousCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/GovernmentProcedurePreviousCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"GovernmentServiceRequestorIdentificationIDType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@schemeAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeDataURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeID": {
+					"$ref": "#/definitions/token"
+				},
+				"@schemeName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeVersionID": {
+					"$ref": "#/definitions/token"
+				}
+			},
+			"additionalProperties": false
+		},
+		"GovernmentServiceRequestorIdentificationIssuingCountryCodeContentType": {
+			"type": "string"
+		},
+		"GovernmentServiceRequestorIdentificationIssuingCountryCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/GovernmentServiceRequestorIdentificationIssuingCountryCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"GovernmentServiceRequestorNameTextType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"GovernmentServiceRequestorRoleCodeContentType": {
+			"type": "string"
+		},
+		"GovernmentServiceRequestorRoleCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/GovernmentServiceRequestorRoleCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"ImporterIdentificationIDType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@schemeAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeDataURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeID": {
+					"$ref": "#/definitions/token"
+				},
+				"@schemeName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeVersionID": {
+					"$ref": "#/definitions/token"
+				}
+			},
+			"required": [
+				"@schemeID"
+			],
+			"additionalProperties": false
+		},
+		"ImporterIdentificationIssuingCountryCodeContentType": {
+			"type": "string"
+		},
+		"ImporterIdentificationIssuingCountryCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/ImporterIdentificationIssuingCountryCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"ImporterNameTextType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"ImporterRoleCodeContentType": {
+			"type": "string"
+		},
+		"ImporterRoleCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/ImporterRoleCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"IntermediateConsigneeIdentificationIDType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@schemeAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeDataURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeID": {
+					"$ref": "#/definitions/token"
+				},
+				"@schemeName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeVersionID": {
+					"$ref": "#/definitions/token"
+				}
+			},
+			"additionalProperties": false
+		},
+		"IntermediateConsigneeIdentificationIssuingCountryCodeContentType": {
+			"type": "string"
+		},
+		"IntermediateConsigneeIdentificationIssuingCountryCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/IntermediateConsigneeIdentificationIssuingCountryCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"IntermediateConsigneeRoleCodeContentType": {
+			"type": "string"
+		},
+		"IntermediateConsigneeRoleCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/IntermediateConsigneeRoleCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"InvoiceAmountAmountType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/decimal"
+				},
+				"@currencyID": {
+					"$ref": "#/definitions/.clm5ISO42173A:ISO3AlphaCurrencyCode"
+				}
+			},
+			"additionalProperties": false
+		},
+		"InvoiceIdentificationIDType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@schemeAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeDataURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeID": {
+					"$ref": "#/definitions/token"
+				},
+				"@schemeName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeVersionID": {
+					"$ref": "#/definitions/token"
+				}
+			},
+			"additionalProperties": false
+		},
+		"InvoiceIssueDateTimeType": {
+			"type": "object",
+			"properties": {
+				"DateTimeString": {
+					"$ref": "#/definitions/string"
+				},
+				"formatCode": {
+				}
+			},
+			"additionalProperties": false
+		},
+		"InvoiceLineItemChargeAmountType": {
+			"type": [
+				"object",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/decimal"
+				},
+				"@currencyID": {
+					"$ref": "#/definitions/.clm5ISO42173A:ISO3AlphaCurrencyCode"
+				}
+			},
+			"required": [
+				"$extensionProperty"
+			],
+			"additionalProperties": false
+		},
+		"InvoiceLineSequenceNumericType": {
+			"type": "number",
+			"minimum": 0
+		},
+		"InvoiceSequenceNumericType": {
+			"type": "number"
+		},
+		"InvoiceTypeCodeContentType": {
+			"type": "string"
+		},
+		"InvoiceTypeCodeType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/InvoiceTypeCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"ItemDAVType": {
+			"type": "string",
+			"maxLength": 4
+		},
+		"OriginCountryCodeContentType": {
+			"$ref": "#/definitions/.ids5ISO316612A:ISOTwoletterCountryCode"
+		},
+		"OriginCountryCodeType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/OriginCountryCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"required": [
+				"$extensionProperty"
+			],
+			"additionalProperties": false
+		},
+		"OriginCountryNameTextType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"OriginRegionIDType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@schemeAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeDataURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeID": {
+					"$ref": "#/definitions/token"
+				},
+				"@schemeName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeVersionID": {
+					"$ref": "#/definitions/token"
+				}
+			},
+			"additionalProperties": false
+		},
+		"OriginRuleCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/token"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"OriginTypeCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/token"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"ProductCharacteristicsDescriptionTextType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"ProductCharacteristicsQualifierCodeContentType": {
+			"type": "string"
+		},
+		"ProductCharacteristicsQualifierCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/ProductCharacteristicsQualifierCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"ProductCharacteristicsSequenceNumericType": {
+			"type": "number",
+			"minimum": 0
+		},
+		"ProductCharacteristicsTypeCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/token"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"SellerIdentificationIDType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@schemeAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeDataURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeID": {
+					"$ref": "#/definitions/token"
+				},
+				"@schemeName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeVersionID": {
+					"$ref": "#/definitions/token"
+				}
+			},
+			"additionalProperties": false
+		},
+		"SellerIdentificationIssuingCountryCodeContentType": {
+			"type": "string"
+		},
+		"SellerIdentificationIssuingCountryCodeType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/SellerIdentificationIssuingCountryCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"SellerNameTextType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"SellerRoleCodeContentType": {
+			"type": "string"
+		},
+		"SellerRoleCodeType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/SellerRoleCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"TradeTermsConditionCodeContentType": {
+			"type": "string"
+		},
+		"TradeTermsConditionCodeType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/TradeTermsConditionCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"TradeTermsCountryCodeContentType": {
+			"$ref": "#/definitions/.ids5ISO316612A:ISOTwoletterCountryCode"
+		},
+		"TradeTermsCountryCodeType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/TradeTermsCountryCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"TradeTermsCountryRelationshipCodeContentType": {
+			"type": "string",
+			"enum": [
+				"158",
+				"159"
+			]
+		},
+		"TradeTermsCountryRelationshipCodeType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/TradeTermsCountryRelationshipCodeContentType"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				},
+				"@listAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@listAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listID": {
+					"$ref": "#/definitions/token"
+				},
+				"@listName": {
+					"$ref": "#/definitions/string"
+				},
+				"@listSchemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@listVersionID": {
+					"$ref": "#/definitions/token"
+				},
+				"@name": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"TradeTermsDescriptionTextType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"TradeTermsLocationIDType": {
+			"type": [
+				"boolean",
+				"object",
+				"string",
+				"number"
+			],
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeAgencyID": {
+					"$ref": "#/definitions/.clm63055:AgencyIdentificationCode"
+				},
+				"@schemeAgencyName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeDataURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeID": {
+					"$ref": "#/definitions/token"
+				},
+				"@schemeName": {
+					"$ref": "#/definitions/string"
+				},
+				"@schemeURI": {
+					"$ref": "#/definitions/anyURI"
+				},
+				"@schemeVersionID": {
+					"$ref": "#/definitions/token"
+				}
+			},
+			"additionalProperties": false
+		},
+		"TradeTermsLocationNameTextType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/string"
+				},
+				"@languageID": {
+					"$ref": "#/definitions/string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"ValueType": {
+			"type": "string",
+			"maxLength": 4
+		},
+		"anyURI": {
+			"type": "string"
+		},
+		"boolean": {
+			"type": "boolean"
+		},
+		"decimal": {
+			"type": "number"
+		},
+		"string": {
+			"type": "string"
+		},
+		"token": {
+			"type": "string",
+			"pattern": "^\\S+$"
+		}
+	}
+}

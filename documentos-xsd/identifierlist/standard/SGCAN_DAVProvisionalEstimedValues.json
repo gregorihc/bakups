@@ -1,0 +1,36 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"description": "INTERCOM - Valores estimados Provisionales",
+	"type": "object",
+	"properties": {
+		"DAVProvisionalEstimedValues:DAVProvisionalEstimedValues": {
+			"$ref": "#/definitions/.DAVProvisionalEstimedValues:DAVProvisionalEstimedValues"
+		}
+	},
+	"additionalProperties": false,
+	"definitions": {
+		".DAVProvisionalEstimedValues:DAVProvisionalEstimedValues": {
+			"$ref": "#/definitions/DAVProvisionalEstimedValues:EstimedValueType"
+		},
+		"DAVProvisionalEstimedValues:EstimedValueType": {
+			"type": "object",
+			"properties": {
+				"$extensionProperty": {
+					"$ref": "#/definitions/DAVProvisionalEstimedValues:ValueType"
+				},
+				"@item": {
+					"$ref": "#/definitions/DAVProvisionalEstimedValues:ItemDAVType"
+				}
+			},
+			"additionalProperties": false
+		},
+		"DAVProvisionalEstimedValues:ItemDAVType": {
+			"type": "string",
+			"maxLength": 4
+		},
+		"DAVProvisionalEstimedValues:ValueType": {
+			"type": "string",
+			"maxLength": 4
+		}
+	}
+}

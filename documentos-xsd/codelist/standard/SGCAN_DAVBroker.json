@@ -1,0 +1,25 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"description": "INTERCOM - Tipo de intermediario",
+	"type": "object",
+	"properties": {
+		"DAVBroker:DAVBroker": {
+			"$ref": "#/definitions/.DAVBroker:DAVBroker"
+		}
+	},
+	"additionalProperties": false,
+	"definitions": {
+		".DAVBroker:DAVBroker": {
+			"$ref": "#/definitions/DAVBroker:DAVBrokerType"
+		},
+		"DAVBroker:DAVBrokerType": {
+			"type": "string",
+			"enum": [
+				"01",
+				"02",
+				"03",
+				"04"
+			]
+		}
+	}
+}

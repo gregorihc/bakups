@@ -1,0 +1,27 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"description": "INTERCOM - Commercial Level",
+	"type": "object",
+	"properties": {
+		"DAVCommercialLevel:DAVCommercialLevel": {
+			"$ref": "#/definitions/.DAVCommercialLevel:DAVCommercialLevel"
+		}
+	},
+	"additionalProperties": false,
+	"definitions": {
+		".DAVCommercialLevel:DAVCommercialLevel": {
+			"$ref": "#/definitions/DAVCommercialLevel:DAVCommercialLevelType"
+		},
+		"DAVCommercialLevel:DAVCommercialLevelType": {
+			"type": "string",
+			"enum": [
+				"01",
+				"02",
+				"03",
+				"04",
+				"05",
+				"06"
+			]
+		}
+	}
+}
